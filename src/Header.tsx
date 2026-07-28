@@ -9,6 +9,7 @@ export default function Header() {
             <nav>
                 <NavLink to="/">Présentation</NavLink>
                 <NavLink to="/feeding">Alimentation</NavLink>
+                <NavLink to="/game">Jeu</NavLink>
             </nav>
         </header>
     )
