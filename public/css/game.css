@@ -51,3 +51,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.score {
+    width: 33%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
