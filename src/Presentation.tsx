@@ -14,6 +14,7 @@ export default function Presentation() {
                 Leur poids peut lui aller de quelques kilogrammes à quelques dizaines de kilogrammes.
                 Niveau couleur, chaque espèce a en commun des <span className="highlight">teintes brunes</span> plus ou moins foncées ainsi qu'un ventre et une gorge plus clairs pour certaines.
             </p>
+            <img src="/images/loutre1.png" alt="Loutre" />
         </main>
     );
 }

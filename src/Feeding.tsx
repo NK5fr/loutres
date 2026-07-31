@@ -10,6 +10,7 @@ export default function Feeding() {
                 Elles possèdent diverses techniques de chasses dont certaines qui sont des <span className="highlight">techniques coopératives</span>.
                 Il a également été observé que les loutres savent <span className="highlight">utiliser des outils</span> comme des pierres pour ouvrir des coquillages.
             </p>
+            <img src="/images/loutre2.png" alt="Loutre" />
         </main>
     );
 }

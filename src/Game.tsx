@@ -8,7 +8,11 @@ export default function Game() {
         for(let i = 0; i < 15; i++) {
             board.push(new Array(15).fill("empty"));
         }
-        otter.forEach(slice => board[slice.i][slice.j] = "otter");
+        board[otter[0].i][otter[0].j] = `otter ${otter[0].direction} tete`;
+        for(let i = 1; i < otter.length - 1; i++) {
+            board[otter[i].i][otter[i].j] = `otter ${otter[i].direction} corps`;
+        }
+        board[otter[otter.length - 1].i][otter[otter.length - 1].j] = `otter ${otter[otter.length - 1].direction} queue`;
         if(!data.fish) {
             let i = Math.floor(Math.random() * 15);
             let j = Math.floor(Math.random() * 15);
@@ -103,7 +107,7 @@ export default function Game() {
         data.fish = null;
         data.direction = "";
         data.moves = [];
-        data.otter = [{ i: 7, j: 4, direction: "right"}, { i: 7, j: 5, direction: "right"}];
+        data.otter = [{ i: 7, j: 5, direction: "right"}, { i: 7, j: 4, direction: "right"}];
         setReset(false);
         setScore(data.otter.length);
         setPlayCounter(pc => pc + 1);
@@ -129,7 +133,7 @@ export default function Game() {
                 clearInterval(interval);
                 setReset(true);
             }
-        }, 200);
+        }, 150);
         return () => {
             if(!stop) {
                 document.removeEventListener("keydown", handleKeyDown);
