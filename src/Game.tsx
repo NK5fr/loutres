@@ -16,7 +16,7 @@ export default function Game() {
         if(!data.fish) {
             let i = Math.floor(Math.random() * 15);
             let j = Math.floor(Math.random() * 15);
-            while(board[i][j] === "otter") {
+            while(board[i][j] !== "empty") {
                 i = Math.floor(Math.random() * 15);
                 j = Math.floor(Math.random() * 15);
             }
